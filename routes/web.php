@@ -3,6 +3,8 @@
 use App\Http\Controllers\CursoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Mail\ContactanosMailable;
+use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +17,7 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', HomeController::class);
+Route::get('/', HomeController::class)->name('home');
 
 // Route::controller(CursoController::class)->group(function(){
 //     Route::get('cursos', 'index')->name('cursos.index');
@@ -40,3 +42,12 @@ Route::resource('cursos', CursoController::class);
 // Route::resource('asignaturas', CursoController::class)
 //     ->parameters(['asignaturas' => 'curso']) // para poner los nombres de los parametros
 //     ->names('cursos'); // para poner los nombres de las rutas
+
+Route::view('nosotros', 'nosotros')->name('nosotros');
+
+Route::get('contactanos', function(){
+    $correo = new ContactanosMailable;
+    Mail::to('obeaskoetxea@gmail.com')->send($correo);
+
+    return 'Mensaje enviado!';
+});
