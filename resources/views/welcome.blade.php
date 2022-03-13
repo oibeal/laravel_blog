@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<x-app-layout>
+</x-app-layout>
+
+{{-- <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -40,7 +43,7 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente vel corporis in odio atque molestias maiores, ad corrupti iure itaque iste doloribus voluptate nemo, saepe libero, nihil totam illo mollitia? 
         </x-alert>
 
-        {{-- 
+        <!--
         <x-alert>
 
             <x-slot name="title">
@@ -57,7 +60,7 @@
             </x-slot>
 
             Hola mundo
-        </x-alert> --}}
+        </x-alert> -->
 
         <!-- componente anonimo -->
         <x-alert2 color="blue" class="mb-4">
@@ -79,7 +82,7 @@
 
     </body>
 
-    {{-- <body class="antialiased">
+    <!-- <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
@@ -187,5 +190,5 @@
                 </div>
             </div>
         </div>
-    </body> --}}
-</html>
+    </body> -->
+</html> --}}
